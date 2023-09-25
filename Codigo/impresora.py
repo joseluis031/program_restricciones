@@ -18,4 +18,4 @@ class impresora(cp_model.CpSolverSolutionCallback):
         print()
 
     def solution_count(self):
-        return self.__solution_count 
+        return self.__contador
