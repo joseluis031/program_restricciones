@@ -45,5 +45,5 @@ def main():
     print(f"  estado   : {solver.StatusName(status)}")
     print(f"  conflictos: {solver.NumConflicts()}")
     print(f"  branches : {solver.NumBranches()}")
-    print(f"  tiempo en encontrar la solucion: {solver.WallTime()} s")
-    print(f"  soluciones encontradas: {solution_printer.solution_count()}, (1 solucion cada fila)")
+    print(f"  Tiempo: {solver.WallTime()} s")
+    print(f"  soluciones encontradas: {impresion.solution_count()}, (1 solucion cada fila)")
