@@ -21,3 +21,13 @@ e = modelo.NewIntVar(0, base - 1, "E")
 letters = [c, p, i, s, f, u, n, t, r, e]    # Letras
 
 assert base >= len(letters) # Verificamos que la base sea mayor o igual a la cantidad de letras
+
+# Definimos las restricciones
+modelo.AddAllDifferent(letters)
+
+# CP + IS + FUN = TRUE
+modelo.Add(
+    c * base + p + i * base + s + f * base * base + u * base + n
+    == t * base * base * base + r * base * base + u * base + e
+)
+
