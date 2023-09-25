@@ -34,11 +34,11 @@ modelo.Add(
 
 def main():
     solver = cp_model.CpSolver()
-    solution_printer = impresora(letters)
+    impresion = impresora(letters)
     # Enumerate all solutions.
     solver.parameters.enumerate_all_solutions = True
     # Solve.
-    status = solver.Solve(modelo, solution_printer)
+    status = solver.Solve(modelo, impresion)
 
     # Statistics.
     print("\Estadisticas")
